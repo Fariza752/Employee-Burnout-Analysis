@@ -1,6 +1,18 @@
 # 👨‍💻 Employee Burnout Prediction (End-to-End ML)
 
 Bu layihə, işçilərin iş yükü və mental yorğunluq göstəriciləri əsasında onların tükənmə (burnout) dərəcəsini proqnozlaşdırmaq üçün hazırlanmışdır.
+## 🎯 Nə Analiz Edirik və Niyə?
+
+Bu layihədə işçilərin iş yükü, mental yorğunluq və resurs bölgüsü göstəriciləri əsasında 
+onların tükənmə (burnout) dərəcəsini proqnozlaşdırmaq üçün Linear Regression modeli 
+qurulub.
+
+**Niyə vacibdir?** İşçi tükənməsi məhsuldarlıq itkisinə və işdən çıxma nisbətinin artmasına 
+səbəb olur. Model vasitəsilə hansı faktorların tükənməyə ən çox təsir etdiyini müəyyən 
+edərək, HR-in erkən müdaxilə etməsinə imkan yaradılır.
+
+**Tədqiq olunan sual:** İş yükü, mental yorğunluq, resurs bölgüsü və vəzifə səviyyəsi 
+əsasında işçinin tükənmə dərəcəsini nə qədər dəqiqliklə proqnozlaşdırmaq mümkündür?
 
 ## 🚀 Layihənin Mərhələləri
 1. **Data Cleaning:** Boşluqların doldurulması və lazımsız məlumatların təmizlənməsi.
@@ -47,6 +59,23 @@ Yeni yaratdığım `Stress_Index` xüsusiyyətinin datada necə paylandığını
 Bütün dəyişənlər arasındakı riyazi əlaqəni göstərən təkmilləşdirilmiş matris. Bu, multikolinearlıq riskini idarə etməyə kömək edir.
 <img width="768" height="659" alt="image" src="https://github.com/user-attachments/assets/e9a6bead-e71c-4ba4-9a8d-56eab9466936" />
 
+## ✅ Nəticə
+
+Linear Regression modeli **87% R² score** ilə işçi tükənməsini uğurla proqnozlaşdırdı — 
+yəni modelin proqnozları real dəyərlərin 87%-lik dəyişkənliyini izah edir.
+
+Analiz nəticəsində müəyyən edildi ki:
+
+- **Mental yorğunluq** və **iş yükü** tükənməyə ən çox təsir edən iki faktordur (Feature 
+  Importance analizinə əsasən)
+- Yaradılan `Stress_Index` göstəricisi model performansını artırdı
+- Resurs bölgüsü ilə stress səviyyəsi arasında aydın əlaqə var — resurs artdıqca stress 
+  dəyişir
+- Fərqli vəzifə qrupları fərqli median tükənmə səviyyəsi göstərir, yəni risk bərabər 
+  paylanmır
+
+**Praktik tətbiq:** Bu model HR komandalarına yüksək risk daşıyan işçi qruplarını 
+əvvəlcədən müəyyən etmək və resurs bölgüsünü buna uyğun tənzimləmək imkanı verir.
 
 ## 📁 İstifadə Olunan Kitabxanalar
 - Pandas, Numpy
